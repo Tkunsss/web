@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Identification Form</title>
+</head>
+<body>
+    <h1>User Identification</h1>
+
+    <form id="identificationForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="Password">Password:</label>
+        <input type="password" id="Password" name="Password" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("identificationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get the form data
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var Password = document.getElementById("Password").value;
+
+            // Create an object to hold the data
+            var userData = {
+                firstName: firstName,
+                lastName: lastName,
+                email: email
+                Password: Password
+            };
+
+            // Perform further processing or send the data to the server/API
+            // For example, you can make an AJAX request to send the data to the server
+
+            // This is a placeholder to demonstrate the data retrieval
+            console.log(userData);
+        });
+    </script>
+</body>
+</html>
